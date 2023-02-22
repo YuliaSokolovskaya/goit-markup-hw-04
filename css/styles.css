@@ -121,6 +121,7 @@ a {
     padding: 188px 0;
     max-width: 1440px;
     margin: 0 auto;
+    height: 600px;
 
     
 
@@ -132,12 +133,10 @@ a {
 }
 .articles-portfolio > li{ 
     width: 360px;
-    cursor: pointer;
+    
     
 }
-.articles-portfolio > li:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+
 .buttons-portfolio {
     display: flex;
     gap: 24px;
@@ -194,7 +193,7 @@ a {
 }
 
 
-.btn-white:hover {
+.btn-white:hover, .btn-white:focus {
     color: #FFFFFF;
     background-color: var(--brand-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -220,6 +219,13 @@ a {
     padding-bottom: 120px;
     padding-top: 96px;
 }
+.portfolio-link {
+    display: block;
+}
+.portfolio-link:hover, .portfolio-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .title {
     line-height: 1.5;
     font-weight: 500;
@@ -284,31 +290,30 @@ background-color: #FFFFFF;
     text-align: center;
     justify-content: center;
 }
-.customer {
 
-  
-    width: 168px;
-    
-    
-}
 .customer-section {
     padding-bottom: 120px;
     padding-top: 130px;
 }
 .social-link {
-    display: block;
-    fill: #4D5AE5;
+    display: flex;
+    background-color: #4D5AE5;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
 }
 .social-link:hover, .social-link:focus {
-    fill: var(--active-link-color);
+    background-color: var(--active-link-color);
 }
 
 .footer .social-link {
-    fill: #434455;
+    background-color: #434455;
 }
 
 .footer .social-link:hover, .footer .social-link:focus {
-    fill: #31D0AA;
+    background-color: #31D0AA;
 }
 
 .customer > img {
@@ -318,16 +323,18 @@ background-color: #FFFFFF;
 }
 .customer-link {
     display: flex;
-    border: 1px solid #8E8F99;
+    border: 1px solid currentColor; 
     border-radius: 4px;
     justify-content: center;
     align-items: center;
     height: 88px;
-    fill: #8e8f99;
+    fill: currentColor;
+    color: #8e8f99;
+    width: 168px;
 }
 .customer-link:hover {
-    border-color: var(--active-link-color);
-    fill: var(--active-link-color);
+    color: var(--active-link-color);
+  
 }
 .company1 {
     width: 41px;
@@ -368,7 +375,7 @@ background-color: #FFFFFF;
 }
 .svg-feature{
     height: 64px;
-    
+    width: 64px;
 }
 .feature-image{
     height: 112px;
@@ -381,9 +388,9 @@ background-color: #FFFFFF;
     
 }
 .svg-team{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    
     
 }
 
@@ -406,6 +413,7 @@ background-color: #FFFFFF;
 .footer-elements {
     display: flex;
     gap: 120px;
+    
 }
 
 .footer .logo {
